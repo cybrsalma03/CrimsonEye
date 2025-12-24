@@ -1,0 +1,13 @@
+id: command-injection
+info:
+  name: Command Injection
+  severity: critical
+  tags: command-injection
+requests:
+  - method: GET
+    path: /vuln.php
+    params:
+      cmd: "whoami"
+    matchers:
+      - type: regex
+        regex: "root|admin|user"

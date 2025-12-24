@@ -1,0 +1,1 @@
+[33m[ERROR] example.com is DOWN (Error: HTTPSConnectionPool(host='example.com', port=443): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f8ce0174230>: Failed to establish a new connection: [Errno 101] Network is unreachable')))[0m

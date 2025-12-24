@@ -1,0 +1,63 @@
+
+id: complex-xss-detection
+
+info:
+  name: Complex XSS Detection
+  author: YourName
+  severity: high
+  description: |
+    Detects XSS vulnerabilities using multiple payloads and matchers.
+  tags: xss, web, security
+
+requests:
+  - method: GET
+    path: "{{BaseURL}}/search?q={{payload}}"
+    headers:
+      User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+      Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8"
+      Accept-Language: "en-US,en;q=0.5"
+      Connection: "keep-alive"
+    payloads:
+      payload:
+        - '"><script>alert("XSS1")</script>'
+        - '"><img src=x onerror=alert("XSS2")>'
+        - "{{randstr}}"
+        - "{{randint}}"
+    matchers:
+      - type: regex
+        regex:
+          - '<script>alert\("XSS1"\)</script>'
+          - '<img src=x onerror=alert\("XSS2"\)>'
+        condition: or
+      - type: word
+        words:
+          - "XSS Detected"
+          - "Script Execution"
+        condition: or
+      - type: status
+        status:
+          - 200
+
+  - method: POST
+    path: "{{BaseURL}}/submit"
+    headers:
+      Content-Type: "application/x-www-form-urlencoded"
+    body: "username={{payload}}&password=test"
+    payloads:
+      payload:
+        - '"><script>alert("XSS3")</script>'
+        - '"><svg/onload=alert("XSS4")>'
+    matchers:
+      - type: regex
+        regex:
+          - '<script>alert\("XSS3"\)</script>'
+          - '<svg/onload=alert\("XSS4"\)>'
+        condition: or
+      - type: word
+        words:
+          - "XSS Detected"
+          - "Script Execution"
+        condition: or
+      - type: status
+        status:
+          - 200

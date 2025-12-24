@@ -1,0 +1,9 @@
+colorama
+fpdf
+fuzzywuzzy
+gitpython
+python-Levenshtein
+pyyaml
+requests
+rich
+tqdm

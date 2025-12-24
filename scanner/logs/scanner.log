@@ -1,0 +1,5 @@
+2025-01-19 16:52:58,063 - ERROR - Error during scan: 'VulnScanner' object has no attribute 'count_templates'
+2025-01-19 16:54:46,345 - ERROR - Error during scan: 'VulnScanner' object has no attribute 'count_templates'
+2025-01-19 16:58:04,081 - ERROR - Error during scan: 'VulnScanner' object has no attribute 'exclude_template'
+2025-01-19 17:45:24,419 - ERROR - Error during scan: 'VulnScanner' object has no attribute 'exclude_template'
+2025-01-19 17:51:22,716 - ERROR - Error during scan: 'VulnScanner' object has no attribute 'filter_template_by_severity'

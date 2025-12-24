@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vulnerability Scan Report</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0d1117; /* Dark background */
+      color: #c9d1d9; /* Light text for contrast */
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .container {
+      background: #161b22; /* Slightly lighter than the background */
+      border-radius: 15px;
+      padding: 2.5rem;
+      width: 90%;
+      max-width: 1200px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      animation: fadeIn 1.5s ease-in-out forwards; /* Add 'forwards' to keep the final state */
+      position: relative;
+      overflow: hidden;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      color: #39d353; /* Teal accent color */
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      animation: slideInDown 1s ease-in-out forwards; /* Add 'forwards' to keep the final state */
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1.5rem;
+      background: #21262d; /* Dark table background */
+      border-radius: 10px;
+      overflow: hidden;
+      animation: slideInUp 1s ease-in-out forwards; /* Add 'forwards' to keep the final state */
+    }
+
+    th, td {
+      padding: 1.2rem;
+      text-align: left;
+    }
+
+    th {
+      background: #39d353; /* Teal accent color */
+      color: #0d1117; /* Dark text for contrast */
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 1.1rem;
+    }
+
+    tr:nth-child(even) {
+      background: #1f242a; /* Slightly lighter for even rows */
+    }
+
+    tr:hover {
+      background: #2d333b; /* Brighter on hover */
+      transition: background 0.3s ease;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideInUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Buttons */
+    .download-btn {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 1rem 2rem;
+      background: #39d353; /* Teal accent color */
+      color: #0d1117; /* Dark text for contrast */
+      border: none;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      animation: pulse 2s infinite; /* Infinite pulse animation */
+    }
+
+    .download-btn:hover {
+      background: #2ea043; /* Darker teal on hover */
+      transform: scale(1.05);
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: rgba(201, 209, 217, 0.7); /* Light text with transparency */
+      animation: fadeIn 2s ease-in-out forwards; /* Add 'forwards' to keep the final state */
+    }
+
+    /* Background Animation */
+    .container::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(57, 211, 83, 0.1), transparent 70%);
+      animation: rotate 15s linear infinite; /* Infinite rotation */
+      z-index: -1;
+    }
+
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* Print Styles */
+    @media print {
+      body {
+        background: #0d1117 !important; /* Ensure dark background in PDF */
+        color: #c9d1d9 !important; /* Ensure light text in PDF */
+      }
+
+      .container {
+        background: #161b22 !important; /* Ensure container background in PDF */
+        box-shadow: none !important; /* Remove shadow for printing */
+        border-radius: 0 !important; /* Remove rounded corners for printing */
+        padding: 1rem !important; /* Adjust padding for printing */
+      }
+
+      h1 {
+        color: #39d353 !important; /* Ensure heading color in PDF */
+      }
+
+      table {
+        background: #21262d !important; /* Ensure table background in PDF */
+      }
+
+      th {
+        background: #39d353 !important; /* Ensure table header color in PDF */
+        color: #0d1117 !important; /* Ensure table header text color in PDF */
+      }
+
+      tr:nth-child(even) {
+        background: #1f242a !important; /* Ensure even row color in PDF */
+      }
+
+      .download-btn {
+        display: none !important; /* Hide the download button in PDF */
+      }
+
+      footer {
+        color: rgba(201, 209, 217, 0.7) !important; /* Ensure footer text color in PDF */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Vulnerability Scan Report</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Target</th>
+          <th>Template</th>
+          <th>Path</th>
+          <th>Matched</th>
+          <th>Severity</th> <!-- Added Severity Column -->
+        </tr>
+      </thead>
+      <tbody>
+        {rows}
+      </tbody>
+    </table>
+    <button class="download-btn" onclick="window.print()">Download Report</button>
+    <footer>
+      Generated by Shosha | © 2025 All rights reserved.
+    </footer>
+  </div>
+</body>
+</html>

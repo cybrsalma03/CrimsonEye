@@ -1,0 +1,116 @@
+[91m
+[91m[!] Error: Virustotal probably now is blocking our requests[0m
+[92mAS207960 Test Intermediate - example.com[0m
+[92m[-] Searching now in Ask..[0m
+[92m[-] Searching now in Baidu..[0m
+[92m[-] Searching now in Bing..[0m
+[92m[-] Searching now in DNSdumpster..[0m
+[92m[-] Searching now in Google..[0m
+[92m[-] Searching now in Netcraft..[0m
+[92m[-] Searching now in PassiveDNS..[0m
+[92m[-] Searching now in SSL Certificates..[0m
+[92m[-] Searching now in ThreatCrowd..[0m
+[92m[-] Searching now in Virustotal..[0m
+[92m[-] Searching now in Yahoo..[0m
+[92mdev.example.com[0m
+[92mm.example.com[0m
+[92mm.testexample.com[0m
+[92mproducts.example.com[0m
+[92msupport.example.com[0m
+[92mwww.example.com[0m
+[93m[-] Saving results to file: [0m[91m/dev/stdout[0m
+[93m[-] Total Unique Subdomains Found: 7[0m
+[94m[-] Enumerating subdomains now for example.com[0m
+# Coded By Ahmed Aboul-Ela - @aboul3la
+/ ___| _   _| |__ | (_)___| |_|___ / _ __
+0ffice-softdco-validation.one
+193.150.70.25
+53253521925252.shop
+7d37378dn.getsex.life
+AS207960 Test Intermediate - example.com
+\___ \| | | | '_ \| | / __| __| |_ \| '__|
+___) | |_| | |_) | | \__ \ |_ ___) | |
+____        _     _ _     _   _____
+aask.co.com
+aerowppdbgw.top
+aircraiftparts.net
+albus.akhakimov.info
+anywayhsggt.top
+aquomatrix.online
+as207960 test intermediate - example.com
+austincoinor.com
+auth-scotiaonline1.info
+bakshggdte.top
+bapestas.online
+bdhggdd.top
+ca54p-oaaaa-aaaal-qcjyq-cai.icp0.io
+cdpliquidity.com
+cewhskkdpet.top
+childcustodilawyers.online
+cloudflare-chatai.pages.dev
+commercial-previewing-folders.online
+contractormegventureapiasrc.com
+de.hotsellbags.com
+dev.example.com
+dev.expeditionquest.com
+die-lounge.bplaced.net
+divorceattorneylawyers.online
+docx365scanner6300msw.com
+eurecobe.site
+example.com
+geezjobs.com
+go.expres.biz.id
+guyufut.com
+h2co3ad.site
+href.li
+huanxinforklift.com
+jjnchdi.co.uk
+kexkex.net
+lahajati.ai
+listingclick.com
+longmegventureapiasrc.com
+m.example.com
+m.testexample.com
+mailinfo-forum.com
+mailinfoforum.info
+microshared.com
+movecrates.com
+mpliftencom.store
+nevvpathlabsgroup.icu
+nkla-cl.df-staging.ovh
+notexistsperm.disdecor.ru
+o62800su.online
+o62800su.site
+office365.universalclosing.com
+orhetal.org
+ouderenchat.be
+pikaks.com
+products.example.com
+pudoma.cloud
+qare.victorianplayers.org
+rtlinestroy.ru
+scanner630filedocx321cm.com
+smtpmail.timurich.ru
+stalevar.ua
+stillrichlessw.org
+subjectname@example.com
+supplemento.org
+support.example.com
+takedownrussia.com
+thewallett.com
+thhecbeards.com
+ucstoolkit.com
+ucstoolkit.store
+user@example.com
+w7g2mrm.daily-theromancespot.com
+webdisk.cas.siramaya.com
+wrpglobal.online
+www.die-lounge.bplaced.net
+www.example.com
+www.huanxinforklift.com
+www.relay.timurich.ru
+www.rtlinestroy.ru
+www.takedownrussia.com
+www.vict.fun
+www.www.www.autodiscover.old.redash.kargosigorta.com
+|____/ \__,_|_.__/|_|_|___/\__|____/|_|[0m[93m

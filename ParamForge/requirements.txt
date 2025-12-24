@@ -1,0 +1,4 @@
+requests
+fuzzywuzzy
+tqdm
+python-Levenshtein

@@ -1,0 +1,13 @@
+id: sql-injection
+info:
+  name: SQL Injection
+  severity: high
+  tags: sqli
+requests:
+  - method: GET
+    path: /vuln.php
+    params:
+      id: "1 OR 1=1"
+    matchers:
+      - type: regex
+        regex: "User: .*"

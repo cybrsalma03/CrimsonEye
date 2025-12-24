@@ -1,0 +1,21 @@
+# Subdomain Enumeration Tools Configuration
+tools:
+  # Sublist3r - Fast subdomain enumeration tool
+  sublist3r:
+    command: "sublist3r -d {domain} -o /dev/stdout"
+    timeout: 120  # Timeout in seconds
+
+  # Amass - In-depth subdomain enumeration
+  amass:
+    command: "amass enum -d {domain} -o /dev/stdout"
+    timeout: 300  # Timeout in seconds
+
+  # Assetfinder - Simple and fast subdomain finder
+  assetfinder:
+    command: "assetfinder {domain}"
+    timeout: 60  # Timeout in seconds
+
+  # Findomain - Cross-platform subdomain enumerator
+  findomain:
+    command: "findomain -t {domain} -q"
+    timeout: 180  # Timeout in seconds
